@@ -4,7 +4,4 @@ channels:
   - dnachun
 dependencies:
   - uv
-  - notebook
-  - r-base
-  - r-irkernel
 
