@@ -1,7 +1,25 @@
-name: cmt
+name: copernicus-training
 channels:
   - conda-forge
-  - dnachun
 dependencies:
-  - uv
+  # Python
+  - python=3.10
+  - pip
+  - ipykernel
+  - ipywidgets
+  - numpy
+  - scipy
+  - matplotlib
+  - xarray
+  - rioxarray
+  - geopandas
+  - geoviews
+  - hvplot
+  - netcdf4
+  - cmocean
 
+  # R
+  - r-base=4.3
+  - r-irkernel
+  - r-tidyverse
+  # add more R packages if needed
