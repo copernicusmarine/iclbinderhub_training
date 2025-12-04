@@ -10,9 +10,10 @@ mkdir essentials-python-manipulation
 bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
 rm -rf essentials-python-manipulation.zip
 
-uv venv
-source .venv/bin/activate
-uv pip install copernicusmarine ipykernel ipywidgets matplotlib rioxarray geopandas geoviews hvplot scipy netcdf4 cmocean
-.venv/bin/python -m ipykernel install --user --name "Python-Marine"
+set -e
 
+# Register Python kernel (from the conda env)
+python -m ipykernel install --user --name "python-marine" --display-name "Python - Copernicus Marine"
 
+# Register R kernel (also inside same env)
+R -e "IRkernel::installspec(prefix = Sys.getenv('CONDA_PREFIX'), name = 'ir', displayname = 'R')"
