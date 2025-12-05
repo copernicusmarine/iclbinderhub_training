@@ -18,7 +18,6 @@ dependencies:
   - netcdf4
   - cmocean
   - copernicusmarine
-  - jupyterlab
 
   # R
   - r-base=4.3
