@@ -12,6 +12,10 @@ mkdir -p essentials-python-manipulation
 bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
 rm -f essentials-python-manipulation.zip
 
+# Install R packages from CRAN that are missing on conda
+R -e "install.packages('ggquiver', repos = 'https://cloud.r-project.org')"
+
+
 # --- Python kernel (optional; Binder will give you a Python kernel anyway) ---
 python -m ipykernel install --user \
   --name "python-marine" \
