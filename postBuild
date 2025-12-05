@@ -1,20 +1,22 @@
 #!/bin/bash
-set -e
+set -euxo pipefail
 
-
+# --- Download example data (optional but fine) ---
 wget "https://atlas.mercator-ocean.fr/s/i76MKm9zbbkJNW4/download" -O cyclone.zip
-mkdir essentials
+mkdir -p essentials
 bsdtar -xf cyclone.zip --strip-components=1 -C essentials
-rm -rf cyclone.zip
+rm -f cyclone.zip
 
 wget "https://atlas.mercator-ocean.fr/s/f7ZpzWgnASPMoWF/download" -O essentials-python-manipulation.zip
-mkdir essentials-python-manipulation
+mkdir -p essentials-python-manipulation
 bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
-rm -rf essentials-python-manipulation.zip
+rm -f essentials-python-manipulation.zip
 
+# --- Python kernel (optional; Binder will give you a Python kernel anyway) ---
+python -m ipykernel install --user \
+  --name "python-marine" \
+  --display-name "Python - Copernicus Marine"
 
-# Register Python kernel (from the conda env)
-python -m ipykernel install --user --name "python-marine" --display-name "Python - Copernicus Marine"
-
-# Register R kernel (also inside same env)
-R -e "IRkernel::installspec(prefix = Sys.getenv('CONDA_PREFIX'), name = 'ir', displayname = 'R')"
+# --- R kernel ---
+# The typical Binder way: install system-wide kernelspec so Jupyter can see it
+R -e "IRkernel::installspec(user = FALSE, name = 'ir', displayname = 'R')"
