@@ -11,16 +11,4 @@ wget "https://atlas.mercator-ocean.fr/s/f7ZpzWgnASPMoWF/download" -O essentials-
 mkdir -p essentials-python-manipulation
 bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
 rm -f essentials-python-manipulation.zip
-
-# Install R packages from CRAN that are missing on conda
-R -e "install.packages('ggquiver', repos = 'https://cloud.r-project.org')"
-
-
-# --- Python kernel (optional; Binder will give you a Python kernel anyway) ---
-python -m ipykernel install --user \
-  --name "python-marine" \
-  --display-name "Python - Copernicus Marine"
-
-# --- R kernel ---
-# The typical Binder way: install system-wide kernelspec so Jupyter can see it
-R -e "IRkernel::installspec(user = FALSE, name = 'ir', displayname = 'R')"
+ 
