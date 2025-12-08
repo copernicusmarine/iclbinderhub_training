@@ -12,3 +12,4 @@ mkdir -p essentials-python-manipulation
 bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
 rm -f essentials-python-manipulation.zip
  
+R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
