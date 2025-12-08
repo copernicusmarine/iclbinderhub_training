@@ -2,27 +2,28 @@ name: copernicus-training
 channels:
   - conda-forge
 dependencies:
-  # Jupyter & Python
-  - python=3.10
+
+  - python=3.11
   - jupyterlab
-  - ipykernel
-  - ipywidgets
+  - notebook<7
+
   - numpy
   - pandas
   - xarray
   - matplotlib
-  - cartopy
-  - copernicusmarine
+  - cartopy          
+  - copernicusmarine 
 
-  # R
-  - r-base=4.3
+
+  - r-base
   - r-irkernel
-  - r-tidyverse
+
+
   - r-ggplot2
-  - r-RColorBrewer
-  - r-ncdf4
-  - r-gridExtra
+  - r-dplyr
+  - r-rcolorbrewer
+  - r-ncdf4      
+  - r-gridextra
   - r-lubridate
-  - r-scales
-  - r-magick
-  # add more R packages if needed
+  - r-scales     
+  - r-magick   
