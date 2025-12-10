@@ -1,15 +1,9 @@
 #!/bin/bash
 set -euxo pipefail
 
-# --- Download example data (optional but fine) ---
-wget "https://atlas.mercator-ocean.fr/s/i76MKm9zbbkJNW4/download" -O cyclone.zip
-mkdir -p essentials
-bsdtar -xf cyclone.zip --strip-components=1 -C essentials
-rm -f cyclone.zip
-
-wget "https://atlas.mercator-ocean.fr/s/f7ZpzWgnASPMoWF/download" -O essentials-python-manipulation.zip
-mkdir -p essentials-python-manipulation
-bsdtar -xf essentials-python-manipulation.zip --strip-components=1 -C essentials-python-manipulation
-rm -f essentials-python-manipulation.zip
+wget "https://atlas.mercator-ocean.fr/s/ZaNNDzron3c9WRK/download" -O training-materials.zip
+mkdir -p training-materials
+bsdtar -xf training-materials.zip --strip-components=1 -C training-materials
+rm -f training-materials.zip
  
 R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
