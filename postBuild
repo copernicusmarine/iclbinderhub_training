@@ -3,8 +3,8 @@
 set -euxo pipefail
 
 wget "https://atlas.mercator-ocean.fr/s/ZaNNDzron3c9WRK/download" -O training-materials.zip
-mkdir -p training-materials
-bsdtar -xf training-materials.zip --strip-components=1 -C training-materials
+mkdir -p Water_Pollution_Tutorials
+bsdtar -xf training-materials.zip --strip-components=1 -C Water_Pollution_Tutorials
 rm -f training-materials.zip
  
 R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
