@@ -1,5 +1,4 @@
 #!/bin/bash
-
 set -euxo pipefail
 
 wget "https://atlas.mercator-ocean.fr/s/o3x4qcYL6qDDHDs/download" -O training-materials.zip
