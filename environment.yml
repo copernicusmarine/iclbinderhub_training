@@ -25,4 +25,3 @@ dependencies:
   - r-gridextra
   - r-lubridate
   - r-scales     
-  - r-ggquiver  
