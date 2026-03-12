@@ -4,16 +4,11 @@ set -euxo pipefail
 wget "https://atlas.mercator-ocean.fr/s/ND6NnwjaHdb7sPB/download" -O training-materials.zip
 mkdir -p Future_Of_The_High_Seas
 
-# Inspect archive structure
-bsdtar -tf training-materials.zip | head -200
-
-# Extract only matching tutorial folders, wherever they sit in the archive tree
 bsdtar -xf training-materials.zip \
-  -C Future_Of_The_High_Seas \
   --strip-components=1 \
-  --include='*/Python Tutorial/*' \
-  --include='*/R Tutorial/*' \
-  @
+  -C Future_Of_The_High_Seas \
+  "Tutorials/Python Tutorial" \
+  "Tutorials/R Tutorial"
 
 rm -f training-materials.zip
 
