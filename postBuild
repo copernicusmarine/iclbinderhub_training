@@ -12,4 +12,4 @@ bsdtar -xf training-materials.zip \
 
 rm -f training-materials.zip
 
-R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
+Rscript -e "install.packages('ggquiver', repos='https://cloud.r-project.org', dependencies=TRUE, verbose=TRUE)"
