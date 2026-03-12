@@ -8,13 +8,11 @@ dependencies:
   - notebook<7
 
   - numpy
-  - pandas
   - xarray
   - matplotlib
   - cartopy          
   - copernicusmarine 
-  - scipy
-
+  - h5py
 
   - r-base
   - r-irkernel
@@ -27,4 +25,4 @@ dependencies:
   - r-gridextra
   - r-lubridate
   - r-scales     
-  - r-magick   
+  - r-ggquiver  
