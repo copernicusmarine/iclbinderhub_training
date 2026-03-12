@@ -10,4 +10,4 @@ bsdtar -xf training-materials.zip --strip-components=1 -C Future_Of_The_High_Sea
 
 rm -f training-materials.zip
 
-#R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
+R -e "install.packages('ggquiver', repos='https://cloud.r-project.org')"
