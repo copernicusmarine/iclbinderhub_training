@@ -20,7 +20,7 @@ dependencies:
 
 
   - r-ggplot2
-  - r-dplyr
+  - r-dplyr=1.0.10
   - r-rcolorbrewer
   - r-ncdf4      
   - r-gridextra
