@@ -9,19 +9,9 @@ dependencies:
 
   - numpy
   - xarray
+  - pandas
   - matplotlib
   - cartopy          
   - copernicusmarine 
   - h5py
   - scipy
-
-  - r-base
-  - r-irkernel
-
-  - r-ggplot2
-  - r-dplyr
-  - r-rcolorbrewer
-  - r-ncdf4      
-  - r-gridextra
-  - r-lubridate
-  - r-scales     
