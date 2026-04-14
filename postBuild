@@ -1,15 +1,9 @@
 #!/bin/bash
 set -euxo pipefail
 
-wget "https://atlas.mercator-ocean.fr/s/ND6NnwjaHdb7sPB/download" -O training-materials.zip
-mkdir -p Future_Of_The_High_Seas
+wget "https://atlas.mercator-ocean.fr/s/4TtdZgi6xYTzK67/download" -O training-materials.zip
+mkdir -p training_materials
 
-bsdtar -xf training-materials.zip \
-  --strip-components=1 \
-  -C Future_Of_The_High_Seas \
-  "Tutorials/Python Tutorial" \
-  "Tutorials/R Tutorial"
+bsdtar -xf training-materials.zip --strip-components=1 -C training_materials
 
 rm -f training-materials.zip
-
-Rscript -e "install.packages('ggquiver', repos='https://cloud.r-project.org', dependencies=TRUE, verbose=TRUE)"
