@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd Future_Of_The_High_Seas
+cd training_materials
 exec "$@"
